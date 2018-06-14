@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Distance measures in stylometry</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="distances_files/shower-material/package/styles/screen-4x3.css">
+  <link rel="stylesheet" href="distances_files/rmdshower/style-common.css">
+  <link rel="stylesheet" href="distances_files/rmdshower/style-material.css">
+  <link rel="stylesheet" href="distances_files/shower-material/style-override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
+  <script src="distances_files/rmdshower/auto-render.min.js" type="text/javascript"></script>
+  
+  
+  
+  
+  
+</head>
+
+<body class="shower list">
+
+  <header class="caption">
+    <h1>Distance measures in stylometry</h1>
+    <p>Joanna Byszuk, Maciej Eder, Jan Rybicki</p>
+  </header>
+
+  
+  
+<section id="disclaimer" class="slide level2">
+<h2>Disclaimer</h2>
+<p>The presentation was adapted and updated based on the previous presentations on the same topic created by Maciej Eder. All the metaphors are of his invention.</p>
+</section>
+<section id="most-frequent-words---important" class="slide level2">
+<h2>Most frequent words - important?</h2>
+<p><img src="img/A_Short_Collection_CA_100_MFWs_Culled_0__Classic%20Delta__001.png" alt="title" width="500" /></p>
+</section>
+<section id="most-frequent-words---distribution" class="slide level2">
+<h2>Most frequent words - distribution</h2>
+<p><img src="img/all.png" alt="title" width="550" /></p>
+</section>
+<section id="zipfs-law" class="slide level2">
+<h2>Zipf’s law</h2>
+<p>Zipf’s law states that given some corpus of natural language utterances, <em>the frequency of any word is inversely proportional to its rank in the frequency table</em>. Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation.</p>
+</section>
+<section id="zipfs-law---ranklength-dependence" class="slide level2">
+<h2>Zipf’s law - rank/length dependence</h2>
+<ul>
+<li>First ten:
+<ul>
+<li>the, and, to, of, i, a, in, that, he, it<br />
+</li>
+</ul></li>
+<li>100-110:
+<ul>
+<li>made, miss, too, sir, shall, come, might, thought, himself, dear, make<br />
+</li>
+</ul></li>
+<li>10000-10010:
+<ul>
+<li>abel, accommodations, acquainting, acre, addicted, advertisement, area, assiduously, axe, balancing, bedad</li>
+</ul></li>
+</ul>
+</section>
+<section id="zipfs-law---semantics" class="slide level2">
+<h2>Zipf’s law - semantics</h2>
+<p>The more frequent a word, the more meanings it has.</p>
+</section>
+<section id="zipfs-law---principle-of-least-effort" class="slide level2">
+<h2>Zipf’s law - Principle of Least Effort</h2>
+<p><img src="img/least-effort.png" alt="title" width="550" /><br />
+Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-on-principle-of-least-effort.html">learning libraries</a></p>
+</section>
+<section id="zipfs-law---principle-of-least-effort-1" class="slide level2">
+<h2>Zipf’s law - Principle of Least Effort</h2>
+<ul>
+<li>people naturally choose the path of least resistance</li>
+<li>also when writing</li>
+</ul>
+</section>
+<section id="most-frequent-words---distribution-1" class="slide level2">
+<h2>1000 most frequent words - distribution</h2>
+<p><img src="img/thousand.png" alt="title" width="550" /></p>
+</section>
+<section id="most-frequent-words---distribution-2" class="slide level2">
+<h2>100 most frequent words - distribution</h2>
+<p><img src="img/hundred.png" alt="title" width="550" /></p>
+</section>
+<section id="most-frequent-words---distribution-3" class="slide level2">
+<h2>30 most frequent words - distribution</h2>
+<p><img src="img/thirty.png" alt="title" width="550" /></p>
+</section>
+<section id="most-frequent-words---distribution-4" class="slide level2">
+<h2>10 most frequent words - distribution</h2>
+<p><img src="img/ten.png" alt="title" width="550" /></p>
+</section>
+<section id="how-many-words-to-choose" class="slide level2">
+<h2>How many words to choose?</h2>
+<ul>
+<li>which words are <em>really</em> important?</li>
+<li>where to cut the wordlist?</li>
+</ul>
+</section>
+<section id="are-the-words-equally-important" class="slide level2">
+<h2>Are the words equally important?</h2>
+<ul>
+<li>selecting of words</li>
+<li>creating table of frequencies</li>
+<li>using distance measures to assess similarity</li>
+</ul>
+</section>
+<section id="entropy" class="slide level2">
+<h2>Entropy</h2>
+</section>
+<section id="manhattan" class="slide level2">
+<h2>Manhattan</h2>
+</section>
+<section id="canberra" class="slide level2">
+<h2>Canberra</h2>
+</section>
+<section id="wurzburg-cosine" class="slide level2">
+<h2>(Wurzburg) Cosine</h2>
+</section>
+<section id="min-max" class="slide level2">
+<h2>Min-Max</h2>
+</section>
+
+  <!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+  <!-- <div class="progress"></div> -->
+  <script src="distances_files/rmdshower/node_modules/shower/node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+  <!-- Photos by John Carey, fiftyfootshadows.net -->
+
+    <script>renderMathInElement(document.body);</script>
+  
+  
+</body>
+</html>
