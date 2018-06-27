@@ -28,7 +28,8 @@ output:
 
 
 ## Disclaimer
-The presentation was adapted and updated based on the previous presentations on the same topic created by Maciej Eder. All the metaphors are of his invention.
+The presentation was adapted by Joanna Byszuk for the 'Stylometry with R' course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention.
+All calculations/word lists based on A Short Collection of British Fiction corpus as available via Computational Stylistics Group
 
 ## Most frequent words - important?
 ![title](img/A_Short_Collection_CA_100_MFWs_Culled_0__Classic Delta__001.png){width=500px}
@@ -59,16 +60,16 @@ Image source: [learning libraries](http://learninglibraries.blogspot.com/2016/06
 * also when writing
 
 ## 1000 most frequent words - distribution
-![title](img/thousand.png){width=550px}
+![title](img/thousand.png){width=500px}
 
 ## 100 most frequent words - distribution
-![title](img/hundred.png){width=550px}
+![title](img/hundred.png){width=500px}
 
 ## 30 most frequent words - distribution
-![title](img/thirty.png){width=550px}
+![title](img/thirty.png){width=500px}
 
 ## 10 most frequent words - distribution
-![title](img/ten.png){width=550px}
+![title](img/ten.png){width=500px}
 
 ## How many words to choose?
 * which words are *really* important?
@@ -79,7 +80,153 @@ Image source: [learning libraries](http://learninglibraries.blogspot.com/2016/06
 * creating table of frequencies
 * using distance measures to assess similarity
 
+## But what is "distance" between the words/ texts?
 
+## Two texts, one dimension, (just one word as a difference)
+![title](img/dim1.png){width=700px}
+
+## Two texts, one dimension, (just one word as a difference)
+![title](img/dim2.png){width=700px}
+
+## Two texts, two dimension (difference based on 2 words)
+![title](img/dim3.png){width=700px}
+
+## Constructing a two-dimensional space
+![title](img/dim4.png){width=700px}
+
+## Constructing a two-dimensional space
+![title](img/dim5.png){width=700px}
+
+## Two texts, two dimensions (difference based on two words)
+![title](img/dim6.png){width=700px}
+
+## Two texts, three dimensions (difference based on three words)
+![title](img/dim7.png){width=700px}
+
+## Constructing a three-dimensional space
+![title](img/dim8.png){width=700px}
+
+## Constructing a three-dimensional space
+![title](img/dim9.png){width=700px}
+
+## Two texts, three dimensions (difference based on three words)
+![title](img/dim10.png){width=700px}
+
+## Shall we try the fourth dimension? What would it look like?
+![title](img/dim11.png){width=700px}
+
+## Two texts, MANY dimension, one difference based on many words
+![title](img/dim12.png){width=700px}
+
+## One (hypothetical) difference in a multi-dimensional space?
+![title](img/dim13.png){width=700px}
+
+## Dimension reduction
+Why do we need it? 
+* it's hard to visualise more dimensions than 3, it's also hard to accurately compute and process. (Think of a spreadsheet of many columns and rows, and try to imagine it has so many further dimensions that it becomes a bit like in the last picture. Or of Intestellar tesseract scene)
+
+## Or think of "A Wrinkle in Time"'s explanation of time travel!
+![title](img/AWrinkleInTime.jpg){width=700px}
+
+## Two basic concepts:
+* using a table (matrix) of distances (clustering, MDS)
+* rotating a multidimensional space (PCA)
+
+## PCA = Principal Components Analysis
+* Basic concept: looking at data to find coordinates that represent the biggest amount of information - finding the most optimal representation.
+* E.g. drawing a kettle so as to give most details of it might look like this:  
+![title](img/kettle.jpg){width=400px}
+
+## Information loss in PCA
+* Components in PCA are sets of features which grant best information preservation, note however that they always have a value covering a relatively small percantage of all information.
+![title](img/A_Short_Collection_PCA_100_MFWs_Culled_0__PCA__001.png){width=400px}
+
+## Information loss
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |
+  
+  
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | **3.68**    | **3.54**    | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |
+
+|a1 - b1|
+
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | **4.00**    | **4.01**    | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |  
+  
+|a1 - b1| + |a2 - b2|
+
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | **3.46**    | **3.34**    | **3.23**  | **3.40**  | **2.75**   |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |    
+  
+|a1 - b1| + |a2 - b2| + |a3 - b3|
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | **2.34**    | **2.23**    | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |   
+  
+|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4|
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | **3.22**    | **3.63**    | 1.99      | 1.70      | 3.83       |   
+  
+|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4| + |a5 - b5|
+
+
+## Computing distances using table of frequencies
+| word | ABronte_Agn | ABronte_Ten | Austen_Em | Austen_Pr | CBronte_Ja |
+|:----:|:-----------:|:-----------:|:---------:|:---------:|:----------:|
+| the  | 3.68        | 3.54        | 3.24      | 3.56      | 4.19       |
+| and  | 4.00        | 4.01        | 3.04      | 2.94      | 3.54       |
+| to   | 3.46        | 3.34        | 3.23      | 3.40      | 2.75       |
+| of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
+| i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |  
+
+$\sum_{i=1}^{10} |a_i - b_i|$
+
+## Why do we need distance measures?
+
+
+
+## Measures implemented in stylo
 
 ## Entropy
 
@@ -92,6 +239,11 @@ Image source: [learning libraries](http://learninglibraries.blogspot.com/2016/06
 ## (Wurzburg) Cosine
 
 ## Min-Max
+
+
+## I want to know more!
+* [PCA for laymen - video](https://www.youtube.com/watch?v=BfTMmoDFXyE)
+* [Growing difficulty explanation](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues?answertab=active#tab-top)
 
 
 

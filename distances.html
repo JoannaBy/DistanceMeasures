@@ -30,7 +30,7 @@
   
 <section id="disclaimer" class="slide level2">
 <h2>Disclaimer</h2>
-<p>The presentation was adapted and updated based on the previous presentations on the same topic created by Maciej Eder. All the metaphors are of his invention.</p>
+<p>The presentation was adapted by Joanna Byszuk for the ‘Stylometry with R’ course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention. All calculations/word lists based on A Short Collection of British Fiction corpus as available via Computational Stylistics Group</p>
 </section>
 <section id="most-frequent-words---important" class="slide level2">
 <h2>Most frequent words - important?</h2>
@@ -81,19 +81,19 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </section>
 <section id="most-frequent-words---distribution-1" class="slide level2">
 <h2>1000 most frequent words - distribution</h2>
-<p><img src="img/thousand.png" alt="title" width="550" /></p>
+<p><img src="img/thousand.png" alt="title" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-2" class="slide level2">
 <h2>100 most frequent words - distribution</h2>
-<p><img src="img/hundred.png" alt="title" width="550" /></p>
+<p><img src="img/hundred.png" alt="title" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-3" class="slide level2">
 <h2>30 most frequent words - distribution</h2>
-<p><img src="img/thirty.png" alt="title" width="550" /></p>
+<p><img src="img/thirty.png" alt="title" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-4" class="slide level2">
 <h2>10 most frequent words - distribution</h2>
-<p><img src="img/ten.png" alt="title" width="550" /></p>
+<p><img src="img/ten.png" alt="title" width="500" /></p>
 </section>
 <section id="how-many-words-to-choose" class="slide level2">
 <h2>How many words to choose?</h2>
@@ -110,6 +110,504 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 <li>using distance measures to assess similarity</li>
 </ul>
 </section>
+<section id="but-what-is-distance-between-the-words-texts" class="slide level2">
+<h2>But what is “distance” between the words/ texts?</h2>
+</section>
+<section id="two-texts-one-dimension-just-one-word-as-a-difference" class="slide level2">
+<h2>Two texts, one dimension, (just one word as a difference)</h2>
+<p><img src="img/dim1.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-one-dimension-just-one-word-as-a-difference-1" class="slide level2">
+<h2>Two texts, one dimension, (just one word as a difference)</h2>
+<p><img src="img/dim2.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-two-dimension-difference-based-on-2-words" class="slide level2">
+<h2>Two texts, two dimension (difference based on 2 words)</h2>
+<p><img src="img/dim3.png" alt="title" width="700" /></p>
+</section>
+<section id="constructing-a-two-dimensional-space" class="slide level2">
+<h2>Constructing a two-dimensional space</h2>
+<p><img src="img/dim4.png" alt="title" width="700" /></p>
+</section>
+<section id="constructing-a-two-dimensional-space-1" class="slide level2">
+<h2>Constructing a two-dimensional space</h2>
+<p><img src="img/dim5.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-two-dimensions-difference-based-on-two-words" class="slide level2">
+<h2>Two texts, two dimensions (difference based on two words)</h2>
+<p><img src="img/dim6.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-three-dimensions-difference-based-on-three-words" class="slide level2">
+<h2>Two texts, three dimensions (difference based on three words)</h2>
+<p><img src="img/dim7.png" alt="title" width="700" /></p>
+</section>
+<section id="constructing-a-three-dimensional-space" class="slide level2">
+<h2>Constructing a three-dimensional space</h2>
+<p><img src="img/dim8.png" alt="title" width="700" /></p>
+</section>
+<section id="constructing-a-three-dimensional-space-1" class="slide level2">
+<h2>Constructing a three-dimensional space</h2>
+<p><img src="img/dim9.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-three-dimensions-difference-based-on-three-words-1" class="slide level2">
+<h2>Two texts, three dimensions (difference based on three words)</h2>
+<p><img src="img/dim10.png" alt="title" width="700" /></p>
+</section>
+<section id="shall-we-try-the-fourth-dimension-what-would-it-look-like" class="slide level2">
+<h2>Shall we try the fourth dimension? What would it look like?</h2>
+<p><img src="img/dim11.png" alt="title" width="700" /></p>
+</section>
+<section id="two-texts-many-dimension-one-difference-based-on-many-words" class="slide level2">
+<h2>Two texts, MANY dimension, one difference based on many words</h2>
+<p><img src="img/dim12.png" alt="title" width="700" /></p>
+</section>
+<section id="one-hypothetical-difference-in-a-multi-dimensional-space" class="slide level2">
+<h2>One (hypothetical) difference in a multi-dimensional space?</h2>
+<p><img src="img/dim13.png" alt="title" width="700" /></p>
+</section>
+<section id="dimension-reduction" class="slide level2">
+<h2>Dimension reduction</h2>
+<p>Why do we need it? * it’s hard to visualise more dimensions than 3, it’s also hard to accurately compute and process. (Think of a spreadsheet of many columns and rows, and try to imagine it has so many further dimensions that it becomes a bit like in the last picture. Or of Intestellar tesseract scene)</p>
+</section>
+<section id="or-think-of-a-wrinkle-in-times-explanation-of-time-travel" class="slide level2">
+<h2>Or think of “A Wrinkle in Time”’s explanation of time travel!</h2>
+<p><img src="img/AWrinkleInTime.jpg" alt="title" width="700" /></p>
+</section>
+<section id="two-basic-concepts" class="slide level2">
+<h2>Two basic concepts:</h2>
+<ul>
+<li>using a table (matrix) of distances (clustering, MDS)</li>
+<li>rotating a multidimensional space (PCA)</li>
+</ul>
+</section>
+<section id="pca-principal-components-analysis" class="slide level2">
+<h2>PCA = Principal Components Analysis</h2>
+<ul>
+<li>Basic concept: looking at data to find coordinates that represent the biggest amount of information - finding the most optimal representation.</li>
+<li>E.g. drawing a kettle so as to give most details of it might look like this:<br />
+<img src="img/kettle.jpg" alt="title" width="400" /></li>
+</ul>
+</section>
+<section id="information-loss-in-pca" class="slide level2">
+<h2>Information loss in PCA</h2>
+<ul>
+<li>Components in PCA are sets of features which grant best information preservation, note however that they always have a value covering a relatively small percantage of all information. <img src="img/A_Short_Collection_PCA_100_MFWs_Culled_0__PCA__001.png" alt="title" width="400" /></li>
+</ul>
+</section>
+<section id="information-loss" class="slide level2">
+<h2>Information loss</h2>
+</section>
+<section id="computing-distances-using-table-of-frequencies" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="computing-distances-using-table-of-frequencies-1" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;"><strong>3.68</strong></td>
+<td style="text-align: center;"><strong>3.54</strong></td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p>|a1 - b1|</p>
+</section>
+<section id="computing-distances-using-table-of-frequencies-2" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;"><strong>4.00</strong></td>
+<td style="text-align: center;"><strong>4.01</strong></td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p>|a1 - b1| + |a2 - b2|</p>
+</section>
+<section id="computing-distances-using-table-of-frequencies-3" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;"><strong>3.46</strong></td>
+<td style="text-align: center;"><strong>3.34</strong></td>
+<td style="text-align: center;"><strong>3.23</strong></td>
+<td style="text-align: center;"><strong>3.40</strong></td>
+<td style="text-align: center;"><strong>2.75</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p>|a1 - b1| + |a2 - b2| + |a3 - b3|</p>
+</section>
+<section id="computing-distances-using-table-of-frequencies-4" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;"><strong>2.34</strong></td>
+<td style="text-align: center;"><strong>2.23</strong></td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4|</p>
+</section>
+<section id="computing-distances-using-table-of-frequencies-5" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;"><strong>3.22</strong></td>
+<td style="text-align: center;"><strong>3.63</strong></td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4| + |a5 - b5|</p>
+</section>
+<section id="computing-distances-using-table-of-frequencies-6" class="slide level2">
+<h2>Computing distances using table of frequencies</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">word</th>
+<th style="text-align: center;">ABronte_Agn</th>
+<th style="text-align: center;">ABronte_Ten</th>
+<th style="text-align: center;">Austen_Em</th>
+<th style="text-align: center;">Austen_Pr</th>
+<th style="text-align: center;">CBronte_Ja</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">the</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">3.54</td>
+<td style="text-align: center;">3.24</td>
+<td style="text-align: center;">3.56</td>
+<td style="text-align: center;">4.19</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">4.00</td>
+<td style="text-align: center;">4.01</td>
+<td style="text-align: center;">3.04</td>
+<td style="text-align: center;">2.94</td>
+<td style="text-align: center;">3.54</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">to</td>
+<td style="text-align: center;">3.46</td>
+<td style="text-align: center;">3.34</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">of</td>
+<td style="text-align: center;">2.34</td>
+<td style="text-align: center;">2.23</td>
+<td style="text-align: center;">2.67</td>
+<td style="text-align: center;">2.96</td>
+<td style="text-align: center;">2.33</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">i</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.63</td>
+<td style="text-align: center;">1.99</td>
+<td style="text-align: center;">1.70</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\sum_{i=1}^{10} |a_i - b_i|\)</span></p>
+</section>
+<section id="why-do-we-need-distance-measures" class="slide level2">
+<h2>Why do we need distance measures?</h2>
+</section>
+<section id="measures-implemented-in-stylo" class="slide level2">
+<h2>Measures implemented in stylo</h2>
+</section>
 <section id="entropy" class="slide level2">
 <h2>Entropy</h2>
 </section>
@@ -124,6 +622,13 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </section>
 <section id="min-max" class="slide level2">
 <h2>Min-Max</h2>
+</section>
+<section id="i-want-to-know-more" class="slide level2">
+<h2>I want to know more!</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=BfTMmoDFXyE">PCA for laymen - video</a></li>
+<li><a href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues?answertab=active#tab-top">Growing difficulty explanation</a></li>
+</ul>
 </section>
 
   <!--
