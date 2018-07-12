@@ -247,7 +247,7 @@ The question remains:
 ## Euclidean distance 
 A classic distance measure:
   
-$\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}$  
+$$\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}$$  
   
 where:  
 n = the number of MFWs (most frequent words),  
