@@ -22,11 +22,6 @@ output:
 #    fig_caption: false
 ---
 
-
-
-
-
-
 ## Disclaimer
 The presentation was adapted by Joanna Byszuk for the 'Stylometry with R' course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention.  
   
@@ -248,7 +243,6 @@ The question remains:
 | Eder’s delta       | feudal monarchy        |
 | Eder’s simple      | politeia (res publica) | 
 | Canberra           | people's revolution    |
-
 
 ## Euclidean distance 
 A classic distance measure:
