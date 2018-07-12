@@ -22,8 +22,8 @@ output:
 #    fig_caption: false
 ---
 
-
 ## Disclaimer  
+
 The presentation was adapted by Joanna Byszuk for the 'Stylometry with R' course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention.  
   
 All calculations/word lists were based on *A Short Collection of British Fiction* corpus as available via [Computational Stylistics Group](https://github.com/computationalstylistics/A_Small_Collection_of_British_Fiction)
