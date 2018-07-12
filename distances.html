@@ -601,7 +601,7 @@ It’s hard to visualise more dimensions than 3, and it’s also hard to accurat
 </tr>
 </tbody>
 </table>
-<p><span class="math inline">\(\sum_{i=1}^{10} |a_i - b_i|\)</span></p>
+<p><span class="math display">\[\sum_{i=1}^{10} |a_i - b_i|\]</span></p>
 </section>
 <section id="why-do-we-need-distance-measures" class="slide level2">
 <h2>Why do we need distance measures?</h2>
@@ -650,7 +650,7 @@ The question remains:<br />
 <section id="euclidean-distance" class="slide level2">
 <h2>Euclidean distance</h2>
 <p>A classic distance measure:</p>
-<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}\)</span></p>
+<p><span class="math display">\[\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}\]</span></p>
 <p>where:<br />
 n = the number of MFWs (most frequent words),<br />
 <span class="math inline">\(f_{i}\)</span> = the frequency of a given word i,<br />
@@ -663,7 +663,7 @@ A, B = text samples being compared</p>
 <section id="manhattan-distance" class="slide level2">
 <h2>Manhattan distance</h2>
 <p>Another classic distance measure:</p>
-<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} |f_{i}(A) - f_{i}(B)|\)</span></p>
+<p><span class="math display">\[\delta_{AB} = \sum_{i=1}^{n} |f_{i}(A) - f_{i}(B)|\]</span></p>
 </section>
 <section id="manhattan-distance-oligarchy-or-a-small-group-of-rulers" class="slide level2">
 <h2>Manhattan distance: Oligarchy, or a small group of rulers</h2>
@@ -677,9 +677,9 @@ source: <a href="https://blog.exploratory.io/finding-correlations-and-distances-
 <section id="classic-delta" class="slide level2">
 <h2>Classic delta</h2>
 <p>Delta distance as proposed by Burrows:<br />
-<span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}|\)</span></p>
+<span class="math display">\[\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}|\]</span></p>
 <p>the same formula simplified (cf. Argamon, 2008):</p>
-<p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}|\)</span></p>
+<p><span class="math display">\[\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}|\]</span></p>
 </section>
 <section id="classic-delta-democracy-or-the-same-laws-for-all" class="slide level2">
 <h2>Classic delta: Democracy, or the same laws for all</h2>
@@ -688,7 +688,7 @@ source: <a href="https://blog.exploratory.io/finding-correlations-and-distances-
 <section id="eders-modification-to-the-delta-distance" class="slide level2">
 <h2>Eder’s modification to the delta distance</h2>
 <p>A method introducing weights to give slightly more influence to words that are more frequent:</p>
-<p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})\)</span></p>
+<p><span class="math display">\[\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})\]</span></p>
 <p>the same formula simplified algebraically:</p>
 <p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})\)</span></p>
 </section>
@@ -698,7 +698,7 @@ source: <a href="https://blog.exploratory.io/finding-correlations-and-distances-
 </section>
 <section id="eders-simple-i.e.an-anti-zipf-normalization" class="slide level2">
 <h2>Eder’s simple (i.e. an anti-Zipf normalization)</h2>
-<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} |\sqrt{f_{i}(A)} - \sqrt{f_{i}(B)}|\)</span></p>
+<p><span class="math display">\[\delta_{AB} = \sum_{i=1}^{n} |\sqrt{f_{i}(A)} - \sqrt{f_{i}(B)}|\]</span></p>
 </section>
 <section id="eders-simple-monarchia-mixta-politeia-res-publica" class="slide level2">
 <h2>Eder’s simple (monarchia mixta? politeia? res publica?)</h2>
@@ -707,7 +707,7 @@ source: <a href="https://blog.exploratory.io/finding-correlations-and-distances-
 <section id="canberra" class="slide level2">
 <h2>Canberra</h2>
 <p>Another classic method:<br />
-<span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} \frac{|A_{i}|-|B_{i}|}{|A_{i} + B_{i}|}\)</span></p>
+<span class="math display">\[\delta_{AB} = \sum_{i=1}^{n} \frac{|A_{i}|-|B_{i}|}{|A_{i} + B_{i}|}\]</span></p>
 </section>
 <section id="canberra-peoples-revolution" class="slide level2">
 <h2>Canberra: People’s revolution?</h2>

@@ -23,11 +23,7 @@ output:
 ---
 
 
-
-
-
-
-## Disclaimer
+## Disclaimer  
 The presentation was adapted by Joanna Byszuk for the 'Stylometry with R' course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention.  
   
 All calculations/word lists were based on *A Short Collection of British Fiction* corpus as available via [Computational Stylistics Group](https://github.com/computationalstylistics/A_Small_Collection_of_British_Fiction)
@@ -231,7 +227,7 @@ It's hard to visualise more dimensions than 3, and it's also hard to accurately 
 | of   | 2.34        | 2.23        | 2.67      | 2.96      | 2.33       |
 | i    | 3.22        | 3.63        | 1.99      | 1.70      | 3.83       |  
 
-$\sum_{i=1}^{10} |a_i - b_i|$
+$$\sum_{i=1}^{10} |a_i - b_i|$$
 
 ## Why do we need distance measures?
 You now know how to calculate distance between two words (or globally: two texts).   
@@ -250,10 +246,9 @@ The question remains:
 | Canberra           | people's revolution    |
 
 ## Euclidean distance 
-
 A classic distance measure:
   
-$\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}$  
+$$\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}$$  
   
 where:  
 n = the number of MFWs (most frequent words),  
@@ -267,7 +262,7 @@ A, B = text samples being compared
 
 Another classic distance measure:  
   
-$\delta_{AB} = \sum_{i=1}^{n} |f_{i}(A) - f_{i}(B)|$  
+$$\delta_{AB} = \sum_{i=1}^{n} |f_{i}(A) - f_{i}(B)|$$  
 
 ## Manhattan distance: Oligarchy, or a small group of rulers
 ![Manhattan](img/Manhattan.png){width=500px}
@@ -278,11 +273,11 @@ source: [Kan Nishida - blog.exploratory.io](https://blog.exploratory.io/finding-
 
 ## Classic delta
 Delta distance as proposed by Burrows:   
-$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}|$  
+$$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}|$$  
   
 the same formula simplified (cf. Argamon, 2008): 
    
-$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}|$
+$$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}|$$
 
 ## Classic delta: Democracy, or the same laws for all
 ![Classic delta](img/ClassicDelta.png){width=500px}
@@ -290,7 +285,7 @@ $\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}
 ## Eder’s modification to the delta distance
 A method introducing weights to give slightly more influence to words that are more frequent:     
   
-$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})$  
+$$\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})$$  
   
 the same formula simplified algebraically:  
   
@@ -301,14 +296,14 @@ $\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i
 ![Eder’s delta](img/EdersDelta.png){width=500px}
 
 ## Eder’s simple (i.e. an anti-Zipf normalization)
-$\delta_{AB} = \sum_{i=1}^{n} |\sqrt{f_{i}(A)} - \sqrt{f_{i}(B)}|$ 
+$$\delta_{AB} = \sum_{i=1}^{n} |\sqrt{f_{i}(A)} - \sqrt{f_{i}(B)}|$$ 
 
 ## Eder’s simple (monarchia mixta? politeia? res publica?)
 ![Eder’s simple](img/EdersSimple.png){width=500px}
 
 ## Canberra
 Another classic method:  
-$\delta_{AB} = \sum_{i=1}^{n} \frac{|A_{i}|-|B_{i}|}{|A_{i} + B_{i}|}$
+$$\delta_{AB} = \sum_{i=1}^{n} \frac{|A_{i}|-|B_{i}|}{|A_{i} + B_{i}|}$$
 
 ## Canberra: People's revolution?
 ![Canberra](img/Canberra.png){width=500px}
@@ -328,6 +323,7 @@ We will hopefully soon include these methods in plotted comparisions. You can ea
 PCA  
 * [PCA for laymen - video](https://www.youtube.com/watch?v=BfTMmoDFXyE)
 * [Growing difficulty explanation](https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues?answertab=active#tab-top)
+
 
 
 
