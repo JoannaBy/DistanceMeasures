@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="distances_files/shower-material/package/styles/screen-4x3.css">
+  <link rel="stylesheet" href="distances_files/shower-ribbon/package/styles/screen-4x3.css">
   <link rel="stylesheet" href="distances_files/rmdshower/style-common.css">
-  <link rel="stylesheet" href="distances_files/rmdshower/style-material.css">
-  <link rel="stylesheet" href="distances_files/shower-material/style-override.css">
+  <link rel="stylesheet" href="distances_files/rmdshower/style-ribbon.css">
+  <link rel="stylesheet" href="distances_files/shower-ribbon/style-override.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"></script>
   <script src="distances_files/rmdshower/auto-render.min.js" type="text/javascript"></script>
@@ -30,19 +30,21 @@
   
 <section id="disclaimer" class="slide level2">
 <h2>Disclaimer</h2>
-<p>The presentation was adapted by Joanna Byszuk for the ‘Stylometry with R’ course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention. All calculations/word lists based on A Short Collection of British Fiction corpus as available via Computational Stylistics Group</p>
+<p>The presentation was adapted by Joanna Byszuk for the ‘Stylometry with R’ course at DHSI 2018 (co-taught by JB and JR) from the previous presentations on multidimensionality and distance measures created by Maciej Eder. Political system metaphors are of his invention.</p>
+<p>All calculations/word lists were based on <em>A Short Collection of British Fiction</em> corpus as available via <a href="https://github.com/computationalstylistics/A_Small_Collection_of_British_Fiction">Computational Stylistics Group</a></p>
 </section>
 <section id="most-frequent-words---important" class="slide level2">
 <h2>Most frequent words - important?</h2>
-<p><img src="img/A_Short_Collection_CA_100_MFWs_Culled_0__Classic%20Delta__001.png" alt="title" width="500" /></p>
+<p><img src="img/A_Short_Collection_CA_100_MFWs_Culled_0__Classic%20Delta__001.png" alt="mfw-example" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution" class="slide level2">
 <h2>Most frequent words - distribution</h2>
-<p><img src="img/all.png" alt="title" width="550" /></p>
+<p><img src="img/all.png" alt="mfw-distribution" width="550" /></p>
 </section>
 <section id="zipfs-law" class="slide level2">
 <h2>Zipf’s law</h2>
-<p>Zipf’s law states that given some corpus of natural language utterances, <em>the frequency of any word is inversely proportional to its rank in the frequency table</em>. Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation.</p>
+<p>Zipf’s law states that given some corpus of natural language utterances, <strong>the frequency of any word is inversely proportional to its rank in the frequency table</strong>.</p>
+<p>Thus the most frequent word will occur approximately twice as often as the second most frequent word, three times as often as the third most frequent word, etc.: the rank-frequency distribution is an inverse relation.</p>
 </section>
 <section id="zipfs-law---ranklength-dependence" class="slide level2">
 <h2>Zipf’s law - rank/length dependence</h2>
@@ -65,53 +67,53 @@
 </section>
 <section id="zipfs-law---semantics" class="slide level2">
 <h2>Zipf’s law - semantics</h2>
-<p>The more frequent a word, the more meanings it has.</p>
+<p><strong>The more frequent a word, the more meanings it has.</strong></p>
+<p>Think of the words that: * are common in metaphors, e.g. <em>touch</em>, <em>drink</em> * can function as various parts of speech, e.g. <em>round</em> - verb, noun, adj, adv, prep</p>
 </section>
 <section id="zipfs-law---principle-of-least-effort" class="slide level2">
 <h2>Zipf’s law - Principle of Least Effort</h2>
-<p><img src="img/least-effort.png" alt="title" width="550" /><br />
+<p><img src="img/least-effort.png" alt="zipf" width="550" /><br />
 Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-on-principle-of-least-effort.html">learning libraries</a></p>
 </section>
 <section id="zipfs-law---principle-of-least-effort-1" class="slide level2">
 <h2>Zipf’s law - Principle of Least Effort</h2>
 <ul>
-<li>people naturally choose the path of least resistance</li>
-<li>also when writing</li>
+<li>people naturally choose the path of least resistance, also when writing</li>
+<li>most authors use very uncommon words very rarely - this is sometimes measured with methods of <em>lexical richness</em></li>
 </ul>
 </section>
 <section id="most-frequent-words---distribution-1" class="slide level2">
 <h2>1000 most frequent words - distribution</h2>
-<p><img src="img/thousand.png" alt="title" width="500" /></p>
+<p><img src="img/thousand.png" alt="1000mfw" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-2" class="slide level2">
 <h2>100 most frequent words - distribution</h2>
-<p><img src="img/hundred.png" alt="title" width="500" /></p>
+<p><img src="img/hundred.png" alt="100mfw" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-3" class="slide level2">
 <h2>30 most frequent words - distribution</h2>
-<p><img src="img/thirty.png" alt="title" width="500" /></p>
+<p><img src="img/thirty.png" alt="30mfw" width="500" /></p>
 </section>
 <section id="most-frequent-words---distribution-4" class="slide level2">
 <h2>10 most frequent words - distribution</h2>
-<p><img src="img/ten.png" alt="title" width="500" /></p>
+<p><img src="img/ten.png" alt="10mfw" width="500" /></p>
 </section>
 <section id="how-many-words-to-choose" class="slide level2">
 <h2>How many words to choose?</h2>
-<ul>
-<li>which words are <em>really</em> important?</li>
-<li>where to cut the wordlist?</li>
-</ul>
+<p>A difficult question that we face as we need to consider:<br />
+* which words are <em>really</em> important,<br />
+* where to cut the wordlist to obtain valid feature set,</p>
 </section>
 <section id="are-the-words-equally-important" class="slide level2">
 <h2>Are the words equally important?</h2>
-<ul>
-<li>selecting of words</li>
-<li>creating table of frequencies</li>
-<li>using distance measures to assess similarity</li>
-</ul>
+<p>The process of analysis of that consists of:<br />
+* selecting of words<br />
+* creating table of frequencies<br />
+* using distance measures to assess similarity</p>
 </section>
-<section id="but-what-is-distance-between-the-words-texts" class="slide level2">
-<h2>But what is “distance” between the words/ texts?</h2>
+<section id="but-what-is-the-distance-between-words-or-texts" class="slide level2">
+<h2>But what is the “distance” between words or texts?</h2>
+<p><img src="img/distance.jpeg" alt="distance" width="400" /></p>
 </section>
 <section id="two-texts-one-dimension-just-one-word-as-a-difference" class="slide level2">
 <h2>Two texts, one dimension, (just one word as a difference)</h2>
@@ -167,14 +169,16 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </section>
 <section id="dimension-reduction" class="slide level2">
 <h2>Dimension reduction</h2>
-<p>Why do we need it? * it’s hard to visualise more dimensions than 3, it’s also hard to accurately compute and process. (Think of a spreadsheet of many columns and rows, and try to imagine it has so many further dimensions that it becomes a bit like in the last picture. Or of Intestellar tesseract scene)</p>
+<p>Why do we need it?<br />
+It’s hard to visualise more dimensions than 3, and it’s also hard to accurately compute and process multidimensional data. Each new unique word in a corpus adds a new dimension, so the number is rising to quite large values.</p>
+<p><em>Now think of a spreadsheet of many columns and rows, and try to imagine it has so many further dimensions that it becomes a bit like in the last picture. Maybe it looks a bit like in Intestellar tesseract scene…?</em></p>
 </section>
 <section id="or-think-of-a-wrinkle-in-times-explanation-of-time-travel" class="slide level2">
 <h2>Or think of “A Wrinkle in Time”’s explanation of time travel!</h2>
-<p><img src="img/AWrinkleInTime.jpg" alt="title" width="700" /></p>
+<p><img src="img/AWrinkleInTime.jpg" alt="AWrinkleInTime" width="700" /></p>
 </section>
-<section id="two-basic-concepts" class="slide level2">
-<h2>Two basic concepts:</h2>
+<section id="two-basic-concepts-related-to-dimension-reduction" class="slide level2">
+<h2>Two basic concepts related to dimension reduction:</h2>
 <ul>
 <li>using a table (matrix) of distances (clustering, MDS)</li>
 <li>rotating a multidimensional space (PCA)</li>
@@ -184,18 +188,15 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 <h2>PCA = Principal Components Analysis</h2>
 <ul>
 <li>Basic concept: looking at data to find coordinates that represent the biggest amount of information - finding the most optimal representation.</li>
-<li>E.g. drawing a kettle so as to give most details of it might look like this:<br />
-<img src="img/kettle.jpg" alt="title" width="400" /></li>
+<li>E.g. drawing a kettle so as to give most details of what it looks like might look like this:<br />
+<img src="img/kettle.jpg" alt="PCA-kettle" width="400" /></li>
 </ul>
 </section>
 <section id="information-loss-in-pca" class="slide level2">
 <h2>Information loss in PCA</h2>
 <ul>
-<li>Components in PCA are sets of features which grant best information preservation, note however that they always have a value covering a relatively small percantage of all information. <img src="img/A_Short_Collection_PCA_100_MFWs_Culled_0__PCA__001.png" alt="title" width="400" /></li>
+<li>Components in PCA are sets of features which grant best information preservation, note however that they always have a value covering a relatively small percantage of all information. <img src="img/A_Short_Collection_PCA_100_MFWs_Culled_0__PCA__001.png" alt="PCA-example" width="400" /></li>
 </ul>
-</section>
-<section id="information-loss" class="slide level2">
-<h2>Information loss</h2>
 </section>
 <section id="computing-distances-using-table-of-frequencies" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -310,7 +311,7 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </tr>
 </tbody>
 </table>
-<p>|a1 - b1|</p>
+<p><strong>|a1 - b1|</strong></p>
 </section>
 <section id="computing-distances-using-table-of-frequencies-2" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -368,7 +369,7 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </tr>
 </tbody>
 </table>
-<p>|a1 - b1| + |a2 - b2|</p>
+<p><strong>|a1 - b1| + |a2 - b2|</strong></p>
 </section>
 <section id="computing-distances-using-table-of-frequencies-3" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -404,9 +405,9 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 <td style="text-align: center;">to</td>
 <td style="text-align: center;"><strong>3.46</strong></td>
 <td style="text-align: center;"><strong>3.34</strong></td>
-<td style="text-align: center;"><strong>3.23</strong></td>
-<td style="text-align: center;"><strong>3.40</strong></td>
-<td style="text-align: center;"><strong>2.75</strong></td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.40</td>
+<td style="text-align: center;">2.75</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">of</td>
@@ -426,7 +427,7 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </tr>
 </tbody>
 </table>
-<p>|a1 - b1| + |a2 - b2| + |a3 - b3|</p>
+<p><strong>|a1 - b1| + |a2 - b2| + |a3 - b3|</strong></p>
 </section>
 <section id="computing-distances-using-table-of-frequencies-4" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -484,7 +485,7 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </tr>
 </tbody>
 </table>
-<p>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4|</p>
+<p><strong>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4|</strong></p>
 </section>
 <section id="computing-distances-using-table-of-frequencies-5" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -542,7 +543,7 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </tr>
 </tbody>
 </table>
-<p>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4| + |a5 - b5|</p>
+<p><strong>|a1 - b1| + |a2 - b2| + |a3 - b3| + |a4 - b4| + |a5 - b5|</strong></p>
 </section>
 <section id="computing-distances-using-table-of-frequencies-6" class="slide level2">
 <h2>Computing distances using table of frequencies</h2>
@@ -604,31 +605,129 @@ Image source: <a href="http://learninglibraries.blogspot.com/2016/06/reflection-
 </section>
 <section id="why-do-we-need-distance-measures" class="slide level2">
 <h2>Why do we need distance measures?</h2>
+<p>You now know how to calculate distance between two words (or globally: two texts).<br />
+The question remains:<br />
+* are we doing it in the way that works best for language?<br />
+* do we treat all the words the same if we know about Zipf’s Law?</p>
 </section>
-<section id="measures-implemented-in-stylo" class="slide level2">
-<h2>Measures implemented in stylo</h2>
+<section id="stylometric-distances-as-political-systems" class="slide level2">
+<h2>Stylometric distances as political systems</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Distance measure</th>
+<th style="text-align: center;">political system</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Euclidean distance</td>
+<td style="text-align: center;">tyranny</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Manhattan distance</td>
+<td style="text-align: center;">oligarchy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Classic delta</td>
+<td style="text-align: center;">democracy</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Eder’s delta</td>
+<td style="text-align: center;">feudal monarchy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Eder’s simple</td>
+<td style="text-align: center;">politeia (res publica)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Canberra</td>
+<td style="text-align: center;">people’s revolution</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="entropy" class="slide level2">
-<h2>Entropy</h2>
+<section id="euclidean-distance" class="slide level2">
+<h2>Euclidean distance</h2>
+<p>A classic distance measure:</p>
+<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}\)</span></p>
+<p>where:<br />
+n = the number of MFWs (most frequent words),<br />
+<span class="math inline">\(f_{i}\)</span> = the frequency of a given word i,<br />
+A, B = text samples being compared</p>
 </section>
-<section id="manhattan" class="slide level2">
-<h2>Manhattan</h2>
+<section id="euclidean-distance-tyranny-of-the-most-frequent-word" class="slide level2">
+<h2>Euclidean distance: Tyranny of the most frequent word</h2>
+<p><img src="img/Euclidean.png" alt="Euclidean" width="500" /></p>
+</section>
+<section id="manhattan-distance" class="slide level2">
+<h2>Manhattan distance</h2>
+<p>Another classic distance measure:</p>
+<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} |f_{i}(A) - f_{i}(B)|\)</span></p>
+</section>
+<section id="manhattan-distance-oligarchy-or-a-small-group-of-rulers" class="slide level2">
+<h2>Manhattan distance: Oligarchy, or a small group of rulers</h2>
+<p><img src="img/Manhattan.png" alt="Manhattan" width="500" /></p>
+</section>
+<section id="euclidean-vs-manhattan" class="slide level2">
+<h2>Euclidean vs Manhattan</h2>
+<p><img src="img/EucMan.png" alt="EuclideanManhattan" width="500" /><br />
+source: <a href="https://blog.exploratory.io/finding-correlations-and-distances-with-multi-dimensional-scaling-1ea2d1147c1c">Kan Nishida - blog.exploratory.io</a></p>
+</section>
+<section id="classic-delta" class="slide level2">
+<h2>Classic delta</h2>
+<p>Delta distance as proposed by Burrows:<br />
+<span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}|\)</span></p>
+<p>the same formula simplified (cf. Argamon, 2008):</p>
+<p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} |\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}|\)</span></p>
+</section>
+<section id="classic-delta-democracy-or-the-same-laws-for-all" class="slide level2">
+<h2>Classic delta: Democracy, or the same laws for all</h2>
+<p><img src="img/ClassicDelta.png" alt="Classic delta" width="500" /></p>
+</section>
+<section id="eders-modification-to-the-delta-distance" class="slide level2">
+<h2>Eder’s modification to the delta distance</h2>
+<p>A method introducing weights to give slightly more influence to words that are more frequent:</p>
+<p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-\mu_{i}}{\sigma_{i}}-\frac{{}f_{i}(B)-\mu_{i}}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})\)</span></p>
+<p>the same formula simplified algebraically:</p>
+<p><span class="math inline">\(\Delta_{(AB)} = \frac{1}{n} \sum_{i=1}^{n} (|\frac{f_{i}(A)-f_{i}(B)}{\sigma_{i}}| \times \frac{n-n_{i} + 1}{n})\)</span></p>
+</section>
+<section id="eders-delta-feudal-monarchy-or-the-hierarchy-of-honors" class="slide level2">
+<h2>Eder’s delta: Feudal monarchy, or the hierarchy of honors</h2>
+<p><img src="img/EdersDelta.png" alt="Eder’s delta" width="500" /></p>
+</section>
+<section id="eders-simple-i.e.an-anti-zipf-normalization" class="slide level2">
+<h2>Eder’s simple (i.e. an anti-Zipf normalization)</h2>
+<p><span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} |\sqrt{f_{i}(A)} - \sqrt{f_{i}(B)}|\)</span></p>
+</section>
+<section id="eders-simple-monarchia-mixta-politeia-res-publica" class="slide level2">
+<h2>Eder’s simple (monarchia mixta? politeia? res publica?)</h2>
+<p><img src="img/EdersSimple.png" alt="Eder’s simple" width="500" /></p>
 </section>
 <section id="canberra" class="slide level2">
 <h2>Canberra</h2>
+<p>Another classic method:<br />
+<span class="math inline">\(\delta_{AB} = \sum_{i=1}^{n} \frac{|A_{i}|-|B_{i}|}{|A_{i} + B_{i}|}\)</span></p>
 </section>
-<section id="wurzburg-cosine" class="slide level2">
-<h2>(Wurzburg) Cosine</h2>
+<section id="canberra-peoples-revolution" class="slide level2">
+<h2>Canberra: People’s revolution?</h2>
+<p><img src="img/Canberra.png" alt="Canberra" width="500" /></p>
 </section>
-<section id="min-max" class="slide level2">
-<h2>Min-Max</h2>
+<section id="other-methods-implemented-in-stylo-include" class="slide level2">
+<h2>Other methods implemented in stylo include</h2>
+<ul>
+<li>Entropy</li>
+<li>Cosine Distance</li>
+<li>(Wurzburg) Cosine Delta</li>
+<li>Min-Max<br />
+As of summer 2018, stylometric community is excited especially about Cosine Delta (Jannidis et al., 2015), as multiple tests have shown it to be most reliable and well adjusted to text analysis. You can read about it <a href="http://dh2015.org/abstracts">here.</a></li>
+</ul>
+<p>We will hopefully soon include these methods in plotted comparisions. You can easily find their mathematic formulas online.</p>
 </section>
 <section id="i-want-to-know-more" class="slide level2">
 <h2>I want to know more!</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=BfTMmoDFXyE">PCA for laymen - video</a></li>
-<li><a href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues?answertab=active#tab-top">Growing difficulty explanation</a></li>
-</ul>
+<p>PCA<br />
+* <a href="https://www.youtube.com/watch?v=BfTMmoDFXyE">PCA for laymen - video</a> * <a href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues?answertab=active#tab-top">Growing difficulty explanation</a></p>
 </section>
 
   <!--
