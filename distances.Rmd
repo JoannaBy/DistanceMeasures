@@ -249,8 +249,8 @@ The question remains:
 | Eder’s simple      | politeia (res publica) | 
 | Canberra           | people's revolution    |
 
-## Euclidean distance 
 
+## Euclidean distance 
 A classic distance measure:
   
 $\delta_{AB} = \sum_{i=1}^{n} \sqrt{|f_{i}(A)^2 - f_{i}(B)^2|}$  
